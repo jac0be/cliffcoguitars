@@ -1,0 +1,116 @@
+<!--Displays the guitar menu -->
+<!DOCTYPE html>
+
+<head>
+    <title>Guitars | Cliff & Co Guitars</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div id="mainnav">
+            <div id="logocontainer">
+                <a href="index.html">
+                    <img id="logo" src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div id="links">
+                <div class="currentmainnavitem">
+                    <a href="guitars.html">GUITARS</a>
+                </div>
+                <div class="mainnavitem">
+                    <a href="store.html">STORE</a>
+                </div>
+                <div class="mainnavitem">
+                    <a href="aboutus.html">ABOUT US</a>
+                </div>
+                <div class="mainnavitem">
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+        </div>
+        <!--Breadcrumb navigation included to manage screen hierarchy-->
+        <div id="breadcrumbnav">
+            <p id="breadcrumbs">
+                <a href="index.html">Home</a> / Guitars
+            </p>
+        </div>
+        <!--Allows sorting of guitars using a select menu that calls sortGuitars()-->
+        <div id="sortmenu">
+            <label class="sortchoice" for="sortchoice">
+                SORT BY.
+            </label>
+            <select class="sortchoice" onchange="sortGuitars(value);">
+                <option class="sortchoice" value="relevance">Relevance</option>
+                <option class="sortchoice" value="priceasc">Price: Ascending</option>
+                <option class="sortchoice" value="pricedesc">Price: Descending</option>
+            </select>
+        </div>
+    </nav>
+    <main id="mainblock">
+        <div id="guitarmenu">
+            <!--Each guitar stores its own price in its data-value, to be retrieved by javascript and used to sort the guitars.-->
+            <div class="guitarblock" data-value="2999" onclick="location.href='veterola.html'">
+                <img class="guitarimage" src="images/guitars/veterola-sunburst.jpg" alt="Insert image of guitar here.">
+                <p class="guitartitle">
+                    Veterola
+                </p>
+                <p class="guitarprice">
+                    $2,999
+                </p>
+            </div>
+            <div class="guitarblock" data-value="2499">
+                <img class="guitarimage" src="images/guitars/sonic.jpg" alt="Insert image of guitar here.">
+                <p class="guitartitle">
+                    Sonic
+                </p>
+                <p class="guitarprice">
+                    $2,499
+                </p>
+            </div>
+            <div class="guitarblock" data-value="3599">
+                <img class="guitarimage" src="images/guitars/rainbird.jpg" alt="Insert image of guitar here.">
+                <p class="guitartitle">
+                    Rainbird
+                </p>
+                <p class="guitarprice">
+                    $3,599
+                </p>
+            </div>
+            <div class="guitarblock" data-value="1999">
+                <img class="guitarimage" src="images/guitars/night.jpg" alt="Insert image of guitar here.">
+                <p class="guitartitle">
+                    Night
+                </p>
+                <p class="guitarprice">
+                    $1,999
+                </p>
+            </div>
+            <div class="guitarblock" data-value="1599">
+                <img class="guitarimage" src="images/guitars/sunshine.jpg" alt="Insert image of guitar here.">
+                <p class="guitartitle">
+                    Sunshine
+                </p>
+                <p class="guitarprice">
+                    $1,599
+                </p>
+            </div>
+            <div class="guitarblock" data-value="4599">
+                <img class="guitarimage" src="images/guitars/firebird.jpg" alt="Insert image of guitar here.">
+                <p class="guitartitle">
+                    Firebird
+                </p>
+                <p class="guitarprice">
+                    $4,599
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © 2022 Cliff & Co.</p>
+    </footer>
+</body>

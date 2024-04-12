@@ -1,0 +1,684 @@
+/* Basic styling for general elements below */
+body {
+    font-family: 'Alegreya Sans';
+    zoom: 67%;
+    /* Default initial zoom, adjusted to different devices */
+}
+
+#mainblock {
+    margin-top: 110px;
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    background-image: linear-gradient(#f8f9fe, #c3c8fc, #f8f9fe, );
+}
+
+#mainguitarblock {
+    margin-top: 160px;
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    font-size: 10%;
+}
+
+h2 {
+    color: #0E1B8D;
+    font-weight: bold;
+    font-size: 80px;
+    margin: 0;
+}
+
+h3 {
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;
+}
+
+p,
+ul {
+    font-size: 40px;
+}
+
+/* Styles for the navigation menu at the top, present in all pages*/
+#mainnav {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    font-weight: bold;
+    position: fixed;
+    padding: 1px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 98%;
+    background-color: white;
+    justify-content: space-evenly;
+    z-index: 1; /* Set navbar to overlap all other buttons */
+}
+
+#links {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: end;
+    align-self: center;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#logo {
+    height: 100%;
+    width: 225px;
+}
+
+div.mainnavitem {
+    padding: 38px 50px;
+}
+
+div.mainnavitem a {
+    color: black;
+    text-decoration: none;
+}
+
+div.mainnavitem a:hover {
+    color: #0E1B8D;
+}
+
+div.currentmainnavitem {
+    padding: 38px 50px;
+    border-bottom: 15px #0E1B8D solid;
+}
+
+div.currentmainnavitem a {
+    color: #0E1B8D;
+    text-decoration: none;
+}
+
+/* Styles for breadcrumb navigation menu in guitar pages */
+#breadcrumbnav {
+    display: flex;
+    margin-top: 124px;
+    width: 100%;
+    min-height: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #dcdcdc;
+    align-items: flex-start;
+    opacity: 98%;
+}
+
+#breadcrumbtitle,
+#breadcrumbs {
+    padding-left: 5%;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#breadcrumbs {
+    font-size: 35px;
+}
+
+#breadcrumbtitle {
+    padding-top: 0;
+}
+
+#breadcrumbs a {
+    color: #1974fc;
+    text-decoration: none;
+}
+
+#breadcrumbs a:visited {
+    color: #1974fc;
+}
+
+/* Styling for sort menu in guitar page */
+#sortmenu {
+    margin-top: 230px;
+    margin-left: 15px;
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+}
+
+label.sortchoice {
+    font-weight: bold;
+    font-size: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+select.sortchoice {
+    border: solid 2px black;
+    border-radius: 7px;
+    font-size: 30px;
+    font-family: 'Alegreya Sans';
+    width: fit-content;
+}
+
+/* Guitar menu styling */
+#guitarmenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.guitarblock {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    transition: transform 0.2s; 
+    /* Used to animate enlarge on hover */
+}
+
+div.guitarblock:hover {
+    transform: scale(1.1);
+    /* Enlarge on hover */
+    cursor: pointer;
+}
+
+img.guitarimage {
+    align-self: center;
+    width: 200px;
+    height: 621px;
+}
+
+p.guitartitle {
+    font-weight: bold;
+    margin: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+p.guitarprice {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Used to make an entire div clickable simply by placing the a tag within the div */
+a.filldiv {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+/* General image styling */
+#homeimage,
+#cliffimage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#homeimage {
+    margin-top: 130px;
+}
+
+#homeimage img {
+    width:100%;
+}
+
+img.icon {
+    vertical-align: middle;
+    width: 80px;
+}
+
+/* Styles for image and text block segments in about us and store pages */
+div.textimageblock,
+div.textmapblock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+div.textblock {
+    width: 50%;
+    text-align: right;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+div.textmapblock div.textblock {
+    text-align: center;
+}
+
+div.imageblock,
+div.mapblock {
+    width: 50%;
+    text-align: right;
+}
+
+/* Correctly text-allign image and text blocks according to relative position */
+
+/* Select all right textblocks */
+div.imageblock+div.textblock {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 0px;
+}
+
+/* Select all right imageblocks */
+div.textblock+div.imageblock {
+    text-align: left;
+}
+
+.centerblock {
+    text-align: center;
+}
+
+h3.centerblock {
+    margin-top: 10px;
+}
+
+/* Styles for contact form inputs and labels */
+#faq {
+    border-bottom: 2px solid;
+    margin-bottom: 20px;
+}
+
+label.required::after {
+    content: '   *';
+    color: red;
+}
+
+#contact input[type=text],
+#contact input[type=submit],
+#contact select,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: solid 2px black;
+    border-radius: 7px;
+}
+
+#contact input[type=submit] {
+    background-color: #0E1B8D;
+    color: white;
+    font-weight: bolder;
+    margin: 5px;
+    border: 0px;
+    cursor: pointer;
+}
+
+#contact input[type=radio] {
+    margin: 0;
+    padding: 0;
+    transform: scale(2.5);
+    margin-left: 25px;
+    accent-color: #0E1B8D;
+    align-self: center;
+    cursor: pointer;
+}
+
+#contact {
+    font-weight: bold;
+}
+
+#contact p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+#contact * {
+    font-size: 40px;
+    font-family: 'Alegreya Sans';
+}
+
+#message {
+    height: 150px;
+    padding: 5px;
+    resize: none;
+}
+
+#multiplechoice {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 15px;
+    align-self: center;
+    justify-content: space-evenly;
+}
+
+#multiplechoice label {
+    font-weight: normal;
+}
+
+/* Initially hidden, changed by javascript */
+#selectguitarmodel {
+    display: none;
+}
+
+/* Styles for collapse buttons in contact form. Changed using javascript. */
+.collapsebutton {
+    display: block;
+    border: none;
+    border-top: 2px solid black;
+    background-color: white;
+
+    font-size: 50px;
+    font-family: 'Alegreya Sans';
+    font-weight: bold;
+    width: 100%;
+    padding: 30px;
+    cursor: pointer;
+
+    text-align: left;
+    transition: background 0.1s;
+}
+
+.collapsecontent {
+    overflow: hidden;
+    text-align: center;
+    max-height: 0;
+    /* Adjusted with javascript to show content */
+    padding-left: 30px;
+    transition: max-height 0.1s;
+}
+
+.collapsebutton::after {
+    content: '\25be';
+    float: right;
+    color: #0E1B8D;
+    transform: scale(2);
+}
+
+.collapsebutton--active {
+    border-bottom: black;
+}
+
+.collapsebutton--active::after {
+    content: '\25b4';
+}
+
+/* Styles for embedded videos */
+#foundervideo {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for individual guitar pages (only veterola is implemented) */
+#guitardescriptionblock {
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#individualguitarblock {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#individualguitardescription {
+    width: 50%;
+}
+
+#individualguitarimage {
+    width: 330px;
+    height: 1000px;
+}
+
+/* "Find guitar in store" button */
+#storebutton {
+    font-size: 40px;
+    font-family: 'Alegreya Sans';
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid #0E1B8D;
+    border-radius: 7px;
+    color: #0E1B8D;
+    background-color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* The menu for picking the style or color of the guitar */
+#stylechoice {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 40px;
+    margin-top: 10px;
+
+    justify-content: space-evenly;
+}
+
+div.styleoption {
+    width: 30%;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+div.styleoption input {
+    transform: scale(5);
+    accent-color: #0E1B8D;
+    align-self: center;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+/* Audio menu to listen to guitar samples */
+#audiomenu {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-evenly;
+}
+
+#audiomenu audio {
+    margin-left: 80px;
+    margin-right: 80px;
+    transform: scale(1.5);
+}
+
+#audiomenu p {
+    font-size: 35px;
+}
+
+@media only screen and (max-width: 1400px) {
+
+    #mainblock {
+        padding-left: 10%;
+        padding-right: 10%;
+        width: 80%;
+    }
+
+    div.imageblock {
+        display: none;
+    }
+
+    div.textblock {
+        width: 100%;
+        text-align: center;
+    }
+
+    #homeimage {
+        padding-bottom: 30px;
+    }
+
+    div.textmapblock {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.mapblock {
+        width: 100%;
+        text-align: center;
+    }
+
+    div.textblock h2 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    #contact * {
+        font-size: 35px;
+    }
+
+    iframe {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    #mainblock {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+    }
+
+    body {
+        zoom: 75%;
+    }
+
+    .collapsebutton {
+        font-size: 40px;
+        font-family: 'Alegreya Sans';
+    }
+
+    #logocontainer {
+        display: none;
+    }
+
+    div.mainnavitem {
+        padding: 38px 30px;
+    }
+
+    div.currentmainnavitem {
+        padding: 38px 30px;
+    }
+
+
+    h2 {
+        font-size: 60px;
+    }
+
+    h3 {
+        font-size: 35px;
+    }
+
+    p,
+    ul {
+        font-size: 30px;
+    }
+
+    #breadcrumbs {
+        font-size: 30px;
+    }
+
+    label {
+        font-size: 30px;
+    }
+
+    #audiomenu audio {
+        margin-left: 10px;
+        margin-right: 10px;
+        transform: scale(0.95);
+    }
+
+    #guitardescriptionblock {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #individualguitardescription {
+        width: 80%;
+        text-align: left;
+    }
+
+    #individualguitarimage {
+        width: 250px;
+        height: auto;
+    }
+
+    #links {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .collapsebutton {
+        font-size: 35px;
+    }
+
+    #guitarmenu {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    div.guitarblock {
+        margin-bottom: 10%;
+    }
+
+    #audiomenu {
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        justify-content: space-evenly;
+    }
+
+    #audiomenu audio {
+        transform: scale(0.9);
+    }
+
+    #audiomenu div.centerblock {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #audiomenu div.centerblock p {
+        width: 25%;
+        font-size: 30px;
+        text-align: left;
+    }
+
+
+}

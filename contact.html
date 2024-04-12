@@ -1,0 +1,161 @@
+<!--Contact form used to contact the company-->
+<!DOCTYPE html>
+
+<head>
+    <title>Contact | Cliff & Co Guitars</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+
+<!--Everytime the page loads, a javascript function sets up the functionality for the collapse-able FAQ questions-->
+<body onload="setupCollapseButtons()">
+    <nav>
+        <div id="mainnav">
+            <div id="logocontainer">
+                <a href="index.html">
+                    <img id="logo" src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div id="links">
+                <div class="mainnavitem">
+                    <a href="guitars.html">GUITARS</a>
+                </div>
+                <div class="mainnavitem">
+                    <a href="store.html">STORE</a>
+                </div>
+                <div class="mainnavitem">
+                    <a href="aboutus.html">ABOUT US</a>
+                </div>
+                <div class="currentmainnavitem">
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main id="mainblock">
+        <!-- As oppose to contact and about us pages, this page is structured using only centered blocks of text -->
+        <header>
+            <div class="centerblock">
+                <br>
+                <h2>
+                    CONTACT US.
+                </h2>
+                <p>
+                    Many questions you may have can be answered by the following <b>FAQs.</b>
+                </p>
+            </div>
+        </header>
+        <article>
+            <div id="faq">
+                <!--Each FAQ is a clickable button that has been setup on click to trigger an event by the body onload function-->
+                <button type="button" class="collapsebutton">
+                    WHAT IS THE WARRANTY ON MY GUITAR?
+                </button>
+                <!--The content underneath the button is shown by changing the max-height style property using javascript-->
+                <div class="collapsecontent">
+                    <p>
+                        All of our guitars have a 5 year warranty. Cliff & Co Guitars offers limited product warranties
+                        of varying
+                        length for goods purchased from Australian Authorised Cliff & Co® dealers.
+                    </p>
+                </div>
+                <button type="button" class="collapsebutton">
+                    WHAT TYPE OF STRINGS COME WITH MY GUITAR?
+                </button>
+                <div class="collapsecontent">
+                    <p>
+                        Your Cliff & Co guitar features factory-installed Elixir® Strings with NANOWEB® Coating.
+                        Our best-selling electric guitars are now equipped with Elixir Phosphor Bronze Strings,
+                        which deliver that distinctive warmth and sparkle together with extended tone life.
+                    </p>
+                </div>
+                <button type="button" class="collapsebutton">
+                    DOES THIS WEBSITE OFFER SHIPPING?
+                </button>
+                <div class="collapsecontent">
+                    <p>
+                        Unfortunately we are unable to provide customers with online shipping at this time. We instead
+                        ask that you come
+                        to our <a href="store.html">store</a> in person, and come browse our wide variety of electric
+                        guitars.
+                    </p>
+                </div>
+                <button type="button" class="collapsebutton">
+                    WHAT TIME DOES THE STORE CLOSE?
+                </button>
+                <div class="collapsecontent">
+                    <p>
+                        Please see our <a href="store.html">store</a> page for more details on opening hours.
+                    </p>
+                </div>
+            </div>
+        </article>
+        <header>
+            <div class="centerblock">
+                <h2>
+                    STILL UNSURE?
+                </h2>
+                <p>
+                    You can use the following <b>contact form</b> to contact us directly.
+                    <br>
+                    Please fill out your details, and we'll get back to you shortly.
+                </p>
+            </div>
+        </header>
+        <article>
+            <!--Only the email is validated using javascript, the name is stored so that it can be displayed in contactconfirmation.html-->
+            <form id="contact" name="contact" action="contactconfirmation.html" onsubmit="return validateContactForm()"
+                method="get">
+                <!--Required elements are specificied using the required attribute. 
+                    The 'required' class only styles the label to have a red * at the end-->
+                <label class="required" for="fullname">Full Name</label>
+                <input type="text" name="fullname" required>
+                <label class="required" for="fullname">Email</label>
+                <input type="text" name="email" required>
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone">
+                <label for="company">Company</label>
+                <input type="text" name="company">
+                <label class="required" for="subject">Subject</label>
+                <input type="text" name="subject" required>
+
+                <p>Is this in reference to a particular guitar model?</p>
+                <!--The multiple choice inputs show/hide the model selection input depending on user answer.-->
+                <div id="multiplechoice">
+                    <div>
+                        <label for="yesguitarmodel">Yes</label>
+                        <input type="radio" name="isguitarmodel" onclick="showGuitarModelSelection()">
+                    </div>
+                    <div>
+                        <label for="noguitarmodel">No</label>
+                        <input type="radio" name="isguitarmodel" onclick="hideGuitarModelSelection()">
+                    </div>
+                </div>
+                <!--Initially hidden, only shown if user clicks yes to previous answer-->
+                <div id="selectguitarmodel">
+                    <label for="guitarmodels">
+                        Please specify the guitar model.
+                    </label>
+                    <select name="guitarmodels">
+                        <option value="veterola">Veterola</option>
+                        <option value="sonic">Sonic</option>
+                        <option value="rainbird">Rainbird</option>
+                        <option value="firebird">Firebird</option>
+                        <option value="meteor">Meteor</option>
+                        <option value="firebird">Sunshine</option>
+                    </select>
+                </div>
+
+                <label class="required" for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+    </main>
+    <footer>
+        <p>Copyright © 2022 Cliff & Co.</p>
+    </footer>
+    
+</body>

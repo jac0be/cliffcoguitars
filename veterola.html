@@ -1,0 +1,138 @@
+<!--Information on individual guitar pages. NOTE: Only veterola has been implemented-->
+<!DOCTYPE html>
+
+<head>
+    <title>Veterola | Cliff & Co Guitars</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div id="mainnav">
+            <div id="logocontainer">
+                <a href="index.html">
+                    <img id="logo" src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div id="links">
+                <div class="currentmainnavitem">
+                    <a href="guitars.html">GUITARS</a>
+                </div>
+                <div class="mainnavitem">
+                    <a href="store.html">STORE</a>
+                </div>
+                <div class="mainnavitem">
+                    <a href="aboutus.html">ABOUT US</a>
+                </div>
+                <div class="mainnavitem">
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+        </div>
+        <div id="breadcrumbnav">
+            <p id="breadcrumbs">
+                <a href="index.html">Home</a> / <a href="guitars.html">Guitars</a> / Veterola
+            </p>
+            <p id="breadcrumbtitle">
+                Veterola - Sunburst
+            </p>
+        </div>
+    </nav>
+    <main id="mainblock">
+        <div id="mainguitarblock">
+            <!--Defines the block that contains the guitar image and description-->
+            <div id="guitardescriptionblock">
+                <!--Guitar image block-->
+                <div id="individualguitarblock">
+                    <img id="individualguitarimage" src="images/guitars/veterola-sunburst.jpg"
+                        alt="Insert image of guitar here.">
+                </div>
+                <!--Description block (also contains style buttons)-->
+                <div id="individualguitardescription">
+                    <p>
+                        The Veterola was the first guitar Cliff & Co ever
+                        produced, and it returns to its classic design, with
+                        Queensland Maple serving at the backbone for a
+                        clear & crisp tone.
+                        <br>
+                        <br>
+                        It features
+                    </p>
+                    <ul>
+                        <li>Traditional S Style Body Shape</li>
+                        <li>V class bracing</li>
+                        <li>Ebony fingerboard</li>
+                        <li>Queensland Maple Back & Sides</li>
+                        <li>3 Single Coil Pick Ups</li>
+                    </ul>
+                    <h3>Style</h3>
+                    <br>
+                    <!--Style menu, onclick the buttons change the color of the guitar (replaces image using changeGuitarColor())-->
+                    <div id="stylechoice">
+                        <div class="styleoption">
+                            <label for="guitarstyle">Sunburst</label>
+                            <input type="radio" name="guitarstyle" onclick="changeGuitarColor('sunburst')"
+                                style="accent-color:#6d180b" checked="checked">
+                        </div>
+                        <div class="styleoption">
+                            <label for="guitarstyle">Tide</label>
+                            <input type="radio" name="guitarstyle" onclick="changeGuitarColor('seablue')"
+                                style="accent-color:#1d0b96">
+                        </div>
+                        <div class="styleoption">
+                            <label for="guitarstyle">Lime</label>
+                            <input type="radio" name="guitarstyle" onclick="changeGuitarColor('lime')"
+                                style="accent-color:#0c8718">
+                        </div>
+                    </div>
+                    <br>
+                    <!--Price and store button-->
+                    <h3 class="centerblock">
+                        $1,999.99
+                    </h3>
+                    <button id="storebutton" onclick="location.href = 'store.html'">
+                        Find in store.
+                    </button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="centerblock">
+                <h3>
+                    Listen.
+                </h3>
+            </div>
+            <!--Audio menu that the user can listen to guitar samples-->
+            <div id="audiomenu">
+                <div class="centerblock">
+                    <audio controls>
+                        <source src="files/sounds/cleanguitar.wav" type="audio/wav">
+                    </audio>
+                    <p>
+                        Clean
+                    </p>
+                </div>
+                <div class="centerblock">
+                    <audio controls>
+                        <source src="files/sounds/reverbguitar.wav" type="audio/wav">
+                    </audio>
+                    <p>
+                        Reverb
+                    </p>
+                </div>
+                <div class="centerblock">
+                    <audio controls>
+                        <source src="files/sounds/distortionguitar.wav" type="audio/wav">
+                    </audio>
+                    <p>
+                        Distortion
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
